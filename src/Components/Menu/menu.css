@@ -1,0 +1,60 @@
+.navbar{
+    position: sticky;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.menu{
+    background-color: #000;
+    color: #fff;
+    width: 60%;
+    border-radius: 16px;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.list{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.shopycar__container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Shopycar{
+    margin-left: 5px;
+    height: 25px;
+    filter: invert(100%);
+}
+
+.links{
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    height: 40px;
+    min-width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+}
+
+.links:hover{
+    transition: 0.3s ease;
+    background-color: #fff;
+    color: #000;
+    transform: scale(1.1); 
+}
+
+.links:hover .Shopycar{
+    filter: invert(0%);
+}
