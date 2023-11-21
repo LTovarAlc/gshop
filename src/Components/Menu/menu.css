@@ -1,10 +1,24 @@
 .navbar{
     position: sticky;
-    z-index: 1;
+    top: 5%;
+    left: 0;
+    z-index: 1000;
     width: 100%;
     display: flex;
     justify-content: center;
     font-family: 'Raleway', sans-serif;
+}
+
+.navbar.scrolled{
+    position: sticky;
+    top: 2%;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: 'Raleway', sans-serif;
+  
 }
 
 .menu{

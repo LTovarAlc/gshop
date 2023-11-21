@@ -1,12 +1,28 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./menu.css";
 
 const Menu = () => {
+
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 0;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return() => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <nav className="navbar">
+      <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
         <div className="menu">
             <ul className="list">
                 <Link to={"/"} className="links">Inicio</Link>
