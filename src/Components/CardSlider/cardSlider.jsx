@@ -12,7 +12,7 @@ const CardSlider = () => {
             .then((data) => {
                 // Obtener 5 elementos aleatorios del arreglo de la API
                 const randomProducts = [];
-                const numberOfProducts = 5;
+                const numberOfProducts = 1;
                 const dataLength = data.length;
 
                 for (let i = 0; i < numberOfProducts; i++) {
@@ -29,7 +29,7 @@ const CardSlider = () => {
     }, []);
 
     return (
-        <section className="slider">
+        <section className="container__cards">
             {productData.map((product, index) => (
                 <div key={index} className="cardslider">
                         <img src={product.articleIMG} alt="Product" className="product__img" />

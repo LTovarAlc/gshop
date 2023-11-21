@@ -1,17 +1,14 @@
+import "./home.css";
 import { useState, useEffect } from "react";
 import React from "react";
-
-import "./home.css";
+import Slider from "react-slick";
+import CustomSlider from "../../Components/Slider/slider";
 
 
 const Home = () => {
-  return (
-    <>
-      {/* <div className="circle"></div>
-        <div className="circle1"></div>
-        <div className="circle2"></div> */}
-    </>
-  );
+  return <>
+    <CustomSlider/>
+  </>
 };
 
 export default Home;
