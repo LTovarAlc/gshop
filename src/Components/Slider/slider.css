@@ -1,0 +1,22 @@
+.sliderContainer{
+    padding: 64px 0px;
+}
+
+.slick-slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slick-slide{
+    display: flex;
+    align-items: center;
+}
+
+.slick-list{
+    height: 50vh;
+}
+
+.slick-arrow{
+    margin: 0px 350px;
+}
