@@ -1,0 +1,92 @@
+.footer{
+    margin: 64px 0px;
+    padding: 22px 0px;
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.logo__gshop{
+    height: 60px;
+    width: 60px;
+    margin-bottom: 12px;
+}
+
+.toUp{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.footer__info{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brandInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 60%;
+}
+
+.bussinesInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 60%;
+}
+
+.clientService{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 60%;
+}
+
+.devInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 60%;
+}
+
+.socialMedia__icons{
+    height: 30px;
+    margin: 0px 5px;
+}
+
+.devInfo__name{
+    font-weight: 700;
+}
+
+.titles{
+    font-weight: 700;
+}
+
+.footer__links{
+    cursor: pointer;
+    font-weight: 500;
+    color: #383838;
+}
+
+.footer__links:hover{
+    text-decoration: underline;
+    color: #000;
+}
+
+.G-Shop__footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
