@@ -1,0 +1,65 @@
+.cards__container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+.cardProduct{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    height: 320px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 2px;
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
+}
+
+.cardProduct:hover{
+    transition: transform 0.2s ease-out;
+    transform: scale(1.1);
+}
+
+.cardProduct__img{
+    border-radius: 2px;
+    max-width: 100%;
+    max-height:60%;
+    margin-bottom: 20px;
+}
+
+.cardProduct__info{
+    width: 90%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-top: 1px #8f8f8f groove;
+    padding: 12px 0px;
+}
+
+.cardProduct__info-title{
+    font-size: 20px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.cardProduct__info-price{
+    color: #0000ff;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.cardProduct__info-category{
+    font-size: 16px;
+    font-weight: 700;
+    font-style: italic;
+    color: #0000ff;
+}
