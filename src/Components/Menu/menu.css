@@ -7,6 +7,7 @@
     display: flex;
     justify-content: center;
     font-family: 'Raleway', sans-serif;
+    transition: transform 0.3s ease;
 }
 
 .navbar.scrolled{
@@ -18,14 +19,29 @@
     display: flex;
     justify-content: center;
     font-family: 'Raleway', sans-serif;
-  
+    transform: scaleY(0.2);
+    transform-origin: top;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.navbar.scrolled .links{
+    display: none;
+}
+
+.navbar.scrolled:hover{
+    transform: scale(1);
+}
+
+.navbar.scrolled:hover .links{
+    display: flex;
 }
 
 .menu{
     background-color: #000;
     color: #fff;
     width: 60%;
-    border-radius: 16px;
+    border-radius: 10px;
     height: 50px;
     display: flex;
     justify-content: space-around;
