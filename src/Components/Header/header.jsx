@@ -2,7 +2,12 @@ import React from "react";
 
 import "./header.css"
 
-const Header = () => {
+const Header = ({setSearchInput}) => {
+
+    const handleSearchInputChange = (event) => {
+        setSearchInput(event.target.value)
+    }
+
     return<>
     <header className="header">
         <div className="container__brand">
@@ -10,8 +15,14 @@ const Header = () => {
         </div>
         <div className="search__container">
             <div className="input__container">
-                <input type="text" name="search" id="" className="search__input" placeholder="Buscador..."/>
-                <img src="../../img/search-icon.png" alt="Search" className="search-icon" />
+                <input 
+                    type="text" 
+                    name="search"  
+                    className="search__input" 
+                    placeholder="Buscar por categoria..."
+                    onChange={handleSearchInputChange}    
+                />
+                <a href="#products"><img src="../../img/search-icon.png" alt="Search" className="search-icon" /></a>
             </div>
         </div>
         <div className="user-info__container">

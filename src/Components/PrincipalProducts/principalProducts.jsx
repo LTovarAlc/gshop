@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import React from "react";
 import CardProduct from "../CardsProducts/cardProducts";
 
-const PrincipalProducts = () => {
+const PrincipalProducts = ({searchInput}) => {
   const [products, setProducts] = useState([]);
   const [visibleProducts, setVisibleProducts] = useState(12); //cantidad inicial (muestra los primero 12)
   const productsPerPage = 12; // cantidad de productos por pagina
@@ -39,14 +39,18 @@ const PrincipalProducts = () => {
     setVisibleProducts((prevVisibleProducts) => prevVisibleProducts + productsPerPage);
   }
 
+  const filteredProducts = products.filter((product) =>
+    product.articleCategory.toLowerCase().includes(searchInput.toLowerCase())
+  );
+
   return (
-    <div className="productsContainer">
+    <div className="productsContainer" id="products">
       <div className="cards__container">
-        {products.slice(0, visibleProducts).map((product, index) => (
+        {filteredProducts.slice(0, visibleProducts).map((product, index) => (
           <CardProduct key={index} product={product} />
         ))}
       </div>
-      {visibleProducts < products.length && (
+      {visibleProducts < filteredProducts.length && (
         <button onClick={loadMoreProducts} className="moreProducts" >Ver más</button>
       )}
     </div>

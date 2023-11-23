@@ -8,12 +8,15 @@ import Menu from './Components/Menu/menu';
 import Footer from "./Components/Footer/footer";
 
 function App() {
+  
+  const [searchInput, setSearchInput] = useState('');
+
   return(
     <Router>
-      <Header/>
+      <Header setSearchInput={setSearchInput}/>
       <Menu/>
       <Routes>
-        <Route path='/' element={<Home/>}/>
+        <Route path='/' element={<Home searchInput={searchInput} setSearchInput={setSearchInput}/>}/>
       </Routes>
       <Footer/>
     </Router>

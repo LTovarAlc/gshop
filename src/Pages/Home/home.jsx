@@ -5,10 +5,10 @@ import CustomSlider from "../../Components/Slider/slider";
 import PrincipalProducts from "../../Components/PrincipalProducts/principalProducts";
 
 
-const Home = () => {
+const Home = ({searchInput}) => {
   return <>
     <CustomSlider/>
-    <PrincipalProducts/>
+    <PrincipalProducts searchInput={searchInput}/>
   </>
 };
 
