@@ -2,8 +2,16 @@ import "./footer.css"
 import React from "react";
 
 const Footer = () => {
+
+    const handleScrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth" // desplazamiento suave
+        })
+    }
+
     return <footer className="footer">
-        <button className="toUp">Ir arriba</button>
+        <button className="toUp" onClick={handleScrollToTop}>Ir arriba</button>
         <div className="footer__info">
             <div className="brandInfo">
                 <h3 className="titles">Conócenos</h3>

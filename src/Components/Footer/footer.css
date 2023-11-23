@@ -17,10 +17,19 @@
 }
 
 .toUp{
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
     width: 100%;
-    background-color: transparent;
+    height: 60px;
+    background-color: #3f3fbd;
     border: none;
     cursor: pointer;
+}
+
+.toUp:hover{
+    background-color: #2626be;
 }
 
 .footer__info{
