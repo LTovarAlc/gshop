@@ -1,6 +1,25 @@
 .productsContainer{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
+}
+
+.moreProducts{
+    color: #fff;
+    border: none;
+    background-color: #3f3fbd;
+    margin-top: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    height: 35px;
+    width: 100px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.moreProducts:hover{
+    background-color: #2626be;
 }
