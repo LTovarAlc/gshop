@@ -6,6 +6,8 @@ import Home from './Pages/Home/home';
 import Header from './Components/Header/header';
 import Menu from './Components/Menu/menu';
 import Footer from "./Components/Footer/footer";
+import AccountPage from "./Pages/Account/Account";
+
 
 function App() {
   
@@ -17,6 +19,7 @@ function App() {
       <Menu/>
       <Routes>
         <Route path='/' element={<Home searchInput={searchInput} setSearchInput={setSearchInput}/>}/>
+        <Route path="/Account" element={<AccountPage/>}/> 
       </Routes>
       <Footer/>
     </Router>
