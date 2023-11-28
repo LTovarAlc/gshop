@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
+    width: 90%;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -64,4 +64,20 @@
 
 .user__img{
     height: 45px;
+}
+
+.register{
+    height: 50px;
+    width: 120px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #3f3fbd;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.register:hover{
+    background-color: #2626be;
 }

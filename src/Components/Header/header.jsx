@@ -12,13 +12,13 @@ const Header = ({ setSearchInput }) => {
     <>
       <header className="header">
         <Link to={"/"}>
-        <div className="container__brand">
-          <img
-            src="../../img/Gshop-logo.png"
-            alt="Gshop logo"
-            className="logo"
-          />
-        </div>
+          <div className="container__brand">
+            <img
+              src="../../img/Gshop-logo.png"
+              alt="Gshop logo"
+              className="logo"
+            />
+          </div>
         </Link>
         <div className="search__container">
           <div className="input__container">
@@ -38,7 +38,13 @@ const Header = ({ setSearchInput }) => {
             </a>
           </div>
         </div>
-        <Link to={"Account"}>
+        <div className="user__header">
+          <Link to={"Register"}>
+            <div className="register__btn">
+              <button className="register">Registrarse</button>
+            </div>
+          </Link>
+          {/* <Link to={"Account"}>
           <div className="user-info__container">
             <div className="user-img__container">
               <img src="../../img/user.png" alt="User" className="user__img" />
@@ -48,7 +54,8 @@ const Header = ({ setSearchInput }) => {
               <span className="userEmail">someone@example.com</span>
             </div>
           </div>
-        </Link>
+        </Link> */}
+        </div>
       </header>
     </>
   );
