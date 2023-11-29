@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 import "./menu.css";
 
@@ -19,6 +20,12 @@ const Menu = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const location = useLocation();
+
+  if(location.pathname === '/Register'){
+    return null
+  }
 
   return (
     <>

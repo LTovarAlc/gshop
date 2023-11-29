@@ -1,9 +1,16 @@
 import React from "react";
-
 import "./header.css";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const Header = ({ setSearchInput }) => {
+
+  const location = useLocation();
+
+  if(location.pathname === '/Register'){
+    return null
+  }
+
   const handleSearchInputChange = (event) => {
     setSearchInput(event.target.value);
   };
