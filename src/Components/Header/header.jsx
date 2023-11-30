@@ -48,7 +48,7 @@ const Header = ({ setSearchInput }) => {
         <div className="user__header">
           <Link to={"Register"}>
             <div className="register__btn">
-              <button className="register">Registrarse</button>
+              <button className="btn__gradient">Registrarse</button>
             </div>
           </Link>
           {/* <Link to={"Account"}>

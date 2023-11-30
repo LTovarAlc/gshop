@@ -11,7 +11,7 @@ const Footer = () => {
     }
 
     return <footer className="footer">
-        <button className="toUp" onClick={handleScrollToTop}>Ir arriba</button>
+        <button className="toUp__gradient" onClick={handleScrollToTop}>Ir arriba</button>
         <div className="footer__info">
             <div className="brandInfo">
                 <h3 className="titles">Conócenos</h3>

@@ -1,90 +1,110 @@
-.navbar{
-    position: sticky;
-    top: 5%;
-    left: 0;
-    z-index: 1000;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    font-family: 'Raleway', sans-serif;
-    transition: transform 0.3s ease;
+.navbar {
+  position: sticky;
+  top: 5%;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: "Raleway", sans-serif;
+  transition: transform 0.3s ease;
 }
 
-.navbar.scrolled{
-    position: sticky;
-    top: 2%;
-    left: 0;
-    z-index: 1000;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    font-family: 'Raleway', sans-serif;
-    transform: scaleY(0.2);
-    transform-origin: top;
-    overflow: hidden;
-    border-radius: 2px;
+.navbar.scrolled {
+  position: sticky;
+  top: 2%;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: "Raleway", sans-serif;
+  transform: scaleY(0.2);
+  transform-origin: top;
+  overflow: hidden;
+  border-radius: 2px;
 }
 
-.navbar.scrolled .links{
-    display: none;
+.navbar.scrolled .links {
+  display: none;
 }
 
-.navbar.scrolled:hover{
-    transform: scale(1);
+.navbar.scrolled:hover {
+  transform: scale(1);
 }
 
-.navbar.scrolled:hover .links{
-    display: flex;
+.navbar.scrolled:hover .links {
+  display: flex;
 }
 
-.menu{
-    background-color: #000;
-    color: #fff;
-    width: 60%;
-    border-radius: 10px;
-    height: 50px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.menu {
+  background-color: #000;
+  color: #fff;
+  width: 60%;
+  border-radius: 10px;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.list{
-    display: flex;
-    justify-content: center;
-    width: 100%;
+.menu__gradient {
+  width: 60%;
+  height: 50px;
+  background: linear-gradient(334deg, #6b97f7, #7525e2, #f7137e);
+  background-size: 180% 180%;
+  animation: gradient-animation 6s ease infinite;
 }
 
-.shopycar__container{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-.Shopycar{
-    margin-left: 5px;
-    height: 25px;
-    filter: invert(100%);
+.list {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
-.links{
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    height: 40px;
-    min-width: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 25px;
+.shopycar__container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.links:hover{
-    transition: 0.3s ease;
-    background-color: #fff;
-    color: #000;
-    transform: scale(1.1); 
+.Shopycar {
+  margin-left: 5px;
+  height: 25px;
+  filter: invert(100%);
 }
 
-.links:hover .Shopycar{
-    filter: invert(0%);
+.links {
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  height: 40px;
+  min-width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+}
+
+.links:hover {
+  transition: 0.3s ease;
+  background-color: #fff;
+  color: #000;
+  transform: scale(1.1);
+}
+
+.links:hover .Shopycar {
+  filter: invert(0%);
 }

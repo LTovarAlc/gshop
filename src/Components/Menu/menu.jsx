@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import "animate.css"
 
 import "./menu.css";
 
@@ -30,7 +31,7 @@ const Menu = () => {
   return (
     <>
       <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
-        <div className="menu">
+        <div className="menu menu__gradient">
             <ul className="list">
                 <Link to={"/"} className="links">Inicio</Link>
                 <Link to={"/Account"} className="links">Perfil</Link>
