@@ -6,9 +6,9 @@ const FormRegister = () => {
   return (
     <section className="section__form">
       <div className="form__container animate__animated animate__bounceInRight animate__delay-1s">
-        <h2>Registrarse</h2>
+        <h2 className="form__title">Registrarse</h2>
         <form action="" className="formRegister">
-          <div className="input__container">
+          <div className="input__container-forms">
             <input
               type="text"
               name="name"
@@ -24,7 +24,7 @@ const FormRegister = () => {
               placeholder="Apelldos..."
             />
           </div>
-          <div className="input__container">
+          <div className="input__container-forms">
             <input
               type="text"
               name="email"
@@ -33,7 +33,7 @@ const FormRegister = () => {
               placeholder="Correo electronico..."
             />
           </div>
-          <div className="input__container">
+          <div className="input__container-forms">
             <input
               type="password"
               name="password"
@@ -51,11 +51,11 @@ const FormRegister = () => {
             />
           </div>
         </form>
-        <div className="btnSumbmit__container">
-          <button type="submit">Registrarse</button>
+        <div className="btnSubmit__container">
+          <button type="submit" className="btn__submit">Registrarse</button>
         </div>
         <div className="IGAC__container">
-          <span className="IGAC">I got an account</span>
+          <span className="IGAC">Ya tengo una cuenta</span>
         </div>
       </div>
     </section>
