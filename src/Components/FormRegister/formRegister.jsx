@@ -5,7 +5,7 @@ import React from "react";
 const FormRegister = () => {
   return (
     <section className="section__form">
-      <div className="form__container animate__animated animate__bounceInRight animate__delay-2s">
+      <div className="form__container animate__animated animate__bounceInRight animate__delay-1s">
         <form action="" className="formRegister">
           <div className="input__container">
             <input
