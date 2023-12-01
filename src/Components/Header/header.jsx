@@ -28,7 +28,7 @@ const Header = ({ setSearchInput }) => {
           </div>
         </Link>
         <div className="search__container">
-          <div className="input__container">
+          <div className="input__container-search">
             <input
               type="text"
               name="search"

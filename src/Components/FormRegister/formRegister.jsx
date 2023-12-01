@@ -6,6 +6,7 @@ const FormRegister = () => {
   return (
     <section className="section__form">
       <div className="form__container animate__animated animate__bounceInRight animate__delay-1s">
+        <h2>Registrarse</h2>
         <form action="" className="formRegister">
           <div className="input__container">
             <input
