@@ -9,6 +9,26 @@ body{
 	height: 100vh;
 }
 
+::-webkit-scrollbar {
+    width: 6px; /* Ancho de la barra de desplazamiento */
+}
+
+/* Estilos para el track (raíl) */
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color de fondo del track */
+}
+
+/* Estilos para el thumb (la barra deslizante) */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(334deg, #6b97f7, #7525e2, #f7137e); ; /* Color de la barra deslizante */
+    border-radius: 6px; /* Ajuste de bordes */
+}
+
+/* Estilos cuando se pasa el mouse sobre la barra de desplazamiento */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Color de la barra deslizante al pasar el mouse */
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
