@@ -1,0 +1,10 @@
+.show__password{
+    text-decoration: underline;
+    margin-top: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.show__password:hover {
+    color: #7525e2;
+  }
