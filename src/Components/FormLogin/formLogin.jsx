@@ -1,12 +1,9 @@
-import "./formRegister.css";
-import "animate.css";
-import React from "react";
+import "./formLogin.css"
 
-const FormRegister = () => {
-  return (
-    <section className="section__form">
-      <div className="form__container animate__animated animate__bounceInRight animate__delay-1s">
-        <h2 className="form__title">Registrarse</h2>
+const FormLogin = () =>{
+    return <>
+        <div className="form__container animate__animated animate__bounceInRight animate__delay-1s">
+        <h2 className="form__title">Iniciar Sesion</h2>
         <form action="" className="formRegister">
           <div className="input__container-forms">
             <input
@@ -58,8 +55,7 @@ const FormRegister = () => {
           <span className="IGAC">Ya tengo una cuenta</span>
         </div>
       </div>
-    </section>
-  );
-};
+    </>
+}
 
-export default FormRegister;
+export default FormLogin
