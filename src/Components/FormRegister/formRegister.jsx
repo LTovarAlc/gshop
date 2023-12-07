@@ -1,4 +1,3 @@
-import "./formRegister.css"
 import React, { useState } from "react";
 
 const FormRegister = () => {
@@ -10,42 +9,18 @@ const FormRegister = () => {
     password: "",
     confirmPassword: "",
   });
-  const [errors, setErrors] = useState({
-    name: "",
-    lastName: "",
-    email: "",
-    password: "",
-    confirmPassword: "",
-  });
+  const [errors, setErrors] = useState({});
 
   const togglePasswordVisibility = () => {
     setShowPassword((prevShowPassword) => !prevShowPassword);
   };
 
-  const validateEmail = (email) => {
-    // Implementa tu lógica de validación de correo electrónico aquí
-    // Retorna true si el correo es válido, de lo contrario false
-    // Por ejemplo:
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
-  };
+  const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
-  const validatePassword = (password) => {
-    // Implementa tu lógica de validación de contraseña aquí
-    // Retorna true si la contraseña cumple los requisitos, de lo contrario false
-    // Por ejemplo:
-    const regex = /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6,14}$/;
-    return regex.test(password);
-  };
+  const validatePassword = (password) =>
+    /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6,14}$/.test(password);
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
+  const validateFormData = () => {
     const newErrors = {
       name: formData.name.length > 25 ? "Maximo 25 caracteres" : "",
       lastName: formData.lastName.length > 25 ? "Maximo 25 caracteres" : "",
@@ -60,9 +35,22 @@ const FormRegister = () => {
     };
 
     setErrors(newErrors);
+    return Object.values(newErrors).every((error) => error === "");
+  };
 
-    // Aquí puedes realizar acciones adicionales si el formulario es válido
-    // Por ejemplo, enviar los datos a un servidor o realizar otras operaciones
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const isFormValid = validateFormData();
+
+    if (isFormValid) {
+      // Realizar acciones si el formulario es válido
+    }
   };
 
   return (
