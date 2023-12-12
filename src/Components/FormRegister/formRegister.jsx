@@ -1,13 +1,13 @@
 import React, { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 const FormRegister = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const [formData, setFormData] = useState({
+  const [userData, setUserData] = useState({
     name: "",
     lastName: "",
     email: "",
     password: "",
-    confirmPassword: "",
   });
   const [errors, setErrors] = useState({});
 
@@ -22,14 +22,14 @@ const FormRegister = () => {
 
   const validateFormData = () => {
     const newErrors = {
-      name: formData.name.length > 25 ? "Maximo 25 caracteres" : "",
-      lastName: formData.lastName.length > 25 ? "Maximo 25 caracteres" : "",
-      email: !validateEmail(formData.email) ? "Correo invalido" : "",
-      password: !validatePassword(formData.password)
+      name: userData.name.length > 25 ? "Maximo 25 caracteres" : "",
+      lastName: userData.lastName.length > 25 ? "Maximo 25 caracteres" : "",
+      email: !validateEmail(userData.email) ? "Correo invalido" : "",
+      password: !validatePassword(userData.password)
         ? "Contraseña invalida"
         : "",
       confirmPassword:
-        formData.confirmPassword !== formData.password
+        userData.confirmPassword !== userData.password
           ? "Las contraseñas no coinciden"
           : "",
     };
@@ -40,7 +40,8 @@ const FormRegister = () => {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setUserData
+({ ...userData, [name]: value });
   };
 
   const handleSubmit = (e) => {
@@ -49,7 +50,10 @@ const FormRegister = () => {
     const isFormValid = validateFormData();
 
     if (isFormValid) {
-      // Realizar acciones si el formulario es válido
+      const {confirmPassword, ...userDataWithoutConfirmPassword} = userData
+      const userID = uuidv4();
+      const newUser = {userID, ...userDataWithoutConfirmPassword}
+      console.log("usuario creado", newUser)
     }
   };
 
