@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const FormRegister = () => {
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [userData, setUserData] = useState({
     name: "",
@@ -45,6 +48,10 @@ const FormRegister = () => {
 ({ ...userData, [name]: value });
   };
 
+  const handleGoToHome = () => {
+    navigate('/');
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
   
@@ -57,13 +64,35 @@ const FormRegister = () => {
         const newUser = { userID, ...userDataWithoutConfirmPassword };
   
         // Enviar la solicitud POST para crear un nuevo usuario
-        await axios.post('http://localhost:3001/users', newUser);
+        await axios.post('http://localhost:3002/users', newUser);
         
         console.log('Usuario creado:', newUser);
         
         // Puedes limpiar el formulario o redirigir a otra página aquí
+        Swal.fire({
+          title: '¡Registro completado!',
+          icon: 'success',
+          confirmButtonText: 'Ir a inicio'
+        }).then((result)=> {
+          if(result.isConfirmed){
+            handleGoToHome();
+          }
+        })
+
+
       } catch (error) {
         console.error('Error al crear usuario:', error);
+
+        Swal.fire({
+          title: 'Error',
+          text: 'Hubo un problema al crear el usuario',
+          icon: 'error',
+          confirmButtonText: 'Cerrar',
+        }).then((result) => {
+          if (result.dismiss === Swal.DismissReason.close) {
+            window.location.reload();
+          }
+        });
       }
     }
   };
