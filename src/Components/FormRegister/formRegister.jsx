@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import axios from "axios";
 
 const FormRegister = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -44,16 +45,26 @@ const FormRegister = () => {
 ({ ...userData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     const isFormValid = validateFormData();
-
+  
     if (isFormValid) {
-      const {confirmPassword, ...userDataWithoutConfirmPassword} = userData
-      const userID = uuidv4();
-      const newUser = {userID, ...userDataWithoutConfirmPassword}
-      console.log("usuario creado", newUser)
+      try {
+        const { confirmPassword, ...userDataWithoutConfirmPassword } = userData;
+        const userID = uuidv4();
+        const newUser = { userID, ...userDataWithoutConfirmPassword };
+  
+        // Enviar la solicitud POST para crear un nuevo usuario
+        await axios.post('http://localhost:3001/users', newUser);
+        
+        console.log('Usuario creado:', newUser);
+        
+        // Puedes limpiar el formulario o redirigir a otra página aquí
+      } catch (error) {
+        console.error('Error al crear usuario:', error);
+      }
     }
   };
 

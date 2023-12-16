@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "userID": "1da69677-bb9a-4385-99de-041bcdea9bd5",
+      "name": "Luis Humberto",
+      "lastName": "Tovar Alcalá",
+      "email": "luis@email.com",
+      "password": "Enero13",
+      "id": 1
+    }
+  ]
+}
