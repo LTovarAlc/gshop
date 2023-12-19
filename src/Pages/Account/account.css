@@ -1,4 +1,6 @@
 .account__section{
     height: 100vh;
     background: #e9e9e9;
+    display: flex;
+    justify-content: space-between;
 }

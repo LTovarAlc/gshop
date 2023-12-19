@@ -20,7 +20,6 @@ function App() {
         <Route path="/Account" element={<AccountPage/>}/>
         <Route path="/Register" element={<RegisterPage/>}/>  
       </Routes>
-      <Footer/>
     </Router>
   )
 }

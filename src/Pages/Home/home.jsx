@@ -8,12 +8,13 @@ import Menu from "../../Components/Menu/menu"
 
 
 const Home = ({searchInput}) => {
-  return <>
+  return <section className="Home">
     <Header/>
     <Menu/>
     <CustomSlider/>
     <PrincipalProducts searchInput={searchInput}/>
-  </>
+    <Footer/>
+  </section>
 };
 
 export default Home;
