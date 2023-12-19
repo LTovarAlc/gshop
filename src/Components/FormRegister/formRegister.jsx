@@ -1,3 +1,4 @@
+//json-server --watch db.json --port 3002
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import axios from "axios";

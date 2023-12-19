@@ -18,15 +18,22 @@ const CustomSlider = () => {
   };
 
   return (
-    <div className="sliderContainer">
-      <Slider {...settings}>
-        <CardSlider />
-        <CardSlider />
-        <CardSlider />
-        <CardSlider />
-        <CardSlider />
-      </Slider>
-    </div>
+    <section className="sliderSection">
+      <div className="sliderSection__title-container">
+        <div className="sliderSection__title">
+          <h1 className="slider__title">MAS POPULARES!</h1>
+        </div>
+      </div>
+      <div className="sliderContainer">
+        <Slider {...settings}>
+          <CardSlider />
+          <CardSlider />
+          <CardSlider />
+          <CardSlider />
+          <CardSlider />
+        </Slider>
+      </div>
+    </section>
   );
 };
 
