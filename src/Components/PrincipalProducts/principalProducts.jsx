@@ -3,16 +3,16 @@ import { useEffect, useState } from "react";
 import React from "react";
 import CardProduct from "../CardsProducts/cardProducts";
 
-const PrincipalProducts = ({searchInput}) => {
+const PrincipalProducts = ({ searchInput }) => {
   const [products, setProducts] = useState([]);
-  const [visibleProducts, setVisibleProducts] = useState(12); //cantidad inicial (muestra los primero 12)
-  const productsPerPage = 12; // cantidad de productos por pagina
+  const [visibleProducts, setVisibleProducts] = useState(8); //cantidad inicial (muestra los primero 12)
+  const productsPerPage = 8; // cantidad de productos por pagina
 
   useEffect(() => {
     fetch("https://fake-api-particles.vercel.app/principalArticles")
       .then((response) => response.json())
       .then((data) => {
-        const shuffledProducts = shuffleArray(data) 
+        const shuffledProducts = shuffleArray(data);
         setProducts(shuffledProducts); //Almacena los elementos de la API reordenados
       })
       .catch((error) => {
@@ -24,8 +24,8 @@ const PrincipalProducts = ({searchInput}) => {
     let currentIndex = array.length;
     let temporalyValue, randomIndex;
 
-    while(currentIndex !== 0){
-      randomIndex = Math.floor(Math.random() * currentIndex)
+    while (currentIndex !== 0) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex -= 1;
 
       temporalyValue = array[currentIndex];
@@ -35,25 +35,32 @@ const PrincipalProducts = ({searchInput}) => {
     return array;
   };
 
-  const loadMoreProducts = () =>{
-    setVisibleProducts((prevVisibleProducts) => prevVisibleProducts + productsPerPage);
-  }
+  const loadMoreProducts = () => {
+    setVisibleProducts(
+      (prevVisibleProducts) => prevVisibleProducts + productsPerPage
+    );
+  };
 
   const filteredProducts = products.filter((product) =>
     product.articleCategory.toLowerCase().includes(searchInput.toLowerCase())
   );
 
   return (
-    <div className="productsContainer" id="products">
-      <div className="cards__container">
-        {filteredProducts.slice(0, visibleProducts).map((product, index) => (
-          <CardProduct key={index} product={product} />
-        ))}
+    <section className="principalProducts__section">
+      <h1 className="principalProducts__title">Nuestro Productos</h1>
+      <div className="productsContainer" id="products">
+        <div className="cards__container">
+          {filteredProducts.slice(0, visibleProducts).map((product, index) => (
+            <CardProduct key={index} product={product} />
+          ))}
+        </div>
+        {visibleProducts < filteredProducts.length && (
+          <button onClick={loadMoreProducts} className="moreProducts">
+            Ver más
+          </button>
+        )}
       </div>
-      {visibleProducts < filteredProducts.length && (
-        <button onClick={loadMoreProducts} className="moreProducts" >Ver más</button>
-      )}
-    </div>
+    </section>
   );
 };
 
