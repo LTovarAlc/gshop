@@ -15,8 +15,6 @@ function App() {
 
   return(
     <Router>
-      {/* <Header setSearchInput={setSearchInput}/>
-      <Menu/> */}
       <Routes>
         <Route path='/' element={<Home searchInput={searchInput} setSearchInput={setSearchInput}/>}/>
         <Route path="/Account" element={<AccountPage/>}/>
