@@ -1,29 +1,91 @@
-/* Fondo oscuro transparente detrás del modal */
 .modalBackground {
-    position: fixed; /* Coloca el fondo fijo */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Color oscuro con opacidad */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1; /* Asegura que esté por encima del resto del contenido */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 32px 0px;
+  border-radius: 8px;
+  width: 60%;
+  height: 80%;
+  overflow: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  font-family: "Raleway", sans-serif;
+}
+
+.modalBtns {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+}
+
+.addProduct__submit {
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  width: 40%;
+  height: 50px;
+  background: linear-gradient(334deg, #6b97f7, #7525e2, #f7137e);
+  background-size: 180% 180%;
+  animation: gradient-animation 6s ease infinite;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
   }
-  
-  /* Contenido del modal */
-  .modalContent {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    width: 60%;
-    height: 80%;
-    overflow: auto; /* Permite desplazar si el contenido es demasiado grande */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra para el efecto visual */
+  50% {
+    background-position: 100% 50%;
   }
-  
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.addProduct__submit:hover {
+    transition: 0.3s ease;
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.7);
+  }
+
+.addProduct__cancel {
+  background-color: transparent;
+  border: #7525e2 solid 1px;
+  border-radius: 8px;
+  width: 40%;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.addProduct__cancel:hover {
+  transition: 0.3s ease;
+  box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.7);
+}
+
+.modalContent h2{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.addProductsForm__container{
+  height: 70%;
+  width: 60%;
+  padding: 22px 12px;
+}

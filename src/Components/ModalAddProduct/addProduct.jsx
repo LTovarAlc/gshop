@@ -1,11 +1,12 @@
 import AddProductForm from "../AddProductsFORM/addProductForm";
 import "./addProduct.css";
 import React from "react";
+import 'animate.css'
 
 const AddProductsModal = () => {
   return (
-    <div className="modalBackground">
-      <div className="modalContent">
+    <div className="modalBackground animate__animated animate__fadeInLeftBig">
+      <div className="modalContent animate__animated animate__fadeInLeftBig">
         <h2>¡Agregue su nuevo producto!</h2>
         <div className="addProductsForm__container">
           <AddProductForm />
