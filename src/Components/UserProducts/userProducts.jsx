@@ -1,14 +1,17 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./userProducts.css";
 import AddProductsModal from "../ModalAddProduct/addProduct";
 
 const UserProducts = () => {
-  
   const [modalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {
     setModalOpen(true);
-  }
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
 
   return (
     <section className="userProducts">
@@ -18,14 +21,10 @@ const UserProducts = () => {
             Aun no publicas artículos <br />
             ¡Publiquemos algunos!
           </h3>
-          <img
-            src="../../img/agregar.png"
-            alt="Agregar Producto"
-            className="addbtn"
-          />
+          <img src="../../img/agregar.png" alt="Agregar Producto" className="addbtn" />
         </div>
       </div>
-      {modalOpen && <AddProductsModal />}
+      {modalOpen && <AddProductsModal closeModal={closeModal} />}
     </section>
   );
 };

@@ -1,13 +1,17 @@
 import "./addProductForm.css";
 import React from "react";
-import 'animate.css'
+import "animate.css";
 
 const AddProductForm = () => {
   return (
     <form className="addProductForm">
       <div className="infoProduct">
         <div className="InfoProduct__img">
-            <img src="../../img/insertIMG.png" alt="Cargar imagen" className="insertIMG" />
+          <img
+            src="../../img/insertIMG.png"
+            alt="Cargar imagen"
+            className="insertIMG"
+          />
         </div>
         <div className="name__price">
           <div className="addProduct-Input__containerEssential">
