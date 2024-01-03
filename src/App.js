@@ -4,9 +4,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home/home';
 // import Header from './Components/Header/header';
 // import Menu from './Components/Menu/menu';
-import Footer from "./Components/Footer/footer";
+// import Footer from "./Components/Footer/footer";
 import AccountPage from "./Pages/Account/Account";
 import RegisterPage from "./Pages/SignUp-LogIn/SignUp-LogIn";
+import ProductView from "./Pages/ProductView/productView";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path='/' element={<Home searchInput={searchInput} setSearchInput={setSearchInput}/>}/>
         <Route path="/Account" element={<AccountPage/>}/>
         <Route path="/Register" element={<RegisterPage/>}/>  
+        <Route path="/ProductView" element={<ProductView/>}/>
       </Routes>
     </Router>
   )

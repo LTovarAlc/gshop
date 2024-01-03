@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./footer.css";
 import React from "react";
 
@@ -57,6 +58,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <Link to={"/"}>
       <div className="G-Shop__footer">
         <img
           src="../../img/Gshop-icon.png"
@@ -65,6 +67,7 @@ const Footer = () => {
         />
         <span>G-shop 2023 &copy;</span>
       </div>
+      </Link>
     </footer>
   );
 };
