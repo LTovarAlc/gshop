@@ -47,7 +47,7 @@ const PrincipalProducts = ({ searchInput }) => {
 
   return (
     <section className="principalProducts__section">
-      <h1 className="principalProducts__title">Nuestro Productos</h1>
+      <h1 className="principalProducts__title">Nuestros Productos</h1>
       <div className="productsContainer" id="products">
         <div className="cards__container">
           {filteredProducts.slice(0, visibleProducts).map((product, index) => (

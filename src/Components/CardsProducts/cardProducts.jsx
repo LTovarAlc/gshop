@@ -3,11 +3,11 @@ import "./cardProducts.css";
 import React from "react";
 
 const CardProduct = ({ product }) => {
-  const { articleIMG, articleName, articlePrice, articleCategory } = product;
+  const { articleIMG, articleName, articlePrice, articleCategory, id } = product;
 
   return (
     <>
-      <Link to={"/ProductView"}>
+      <Link to={`/ProductView/${id}`}>
         <div className="cardProduct">
           <img src={articleIMG} alt="Product" className="cardProduct__img" />
           <div className="cardProduct__info">

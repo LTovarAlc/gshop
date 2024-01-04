@@ -20,7 +20,7 @@ function App() {
         <Route path='/' element={<Home searchInput={searchInput} setSearchInput={setSearchInput}/>}/>
         <Route path="/Account" element={<AccountPage/>}/>
         <Route path="/Register" element={<RegisterPage/>}/>  
-        <Route path="/ProductView" element={<ProductView/>}/>
+        <Route path="/ProductView/:id" element={<ProductView/>}/>
       </Routes>
     </Router>
   )
