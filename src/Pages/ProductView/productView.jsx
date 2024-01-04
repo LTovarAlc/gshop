@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import "./productView.css";
 import Header from "../../Components/Header/header";
 import Footer from "../../Components/Footer/footer";
+import Menu  from "../../Components/Menu/menu"
 
 const ProductView = () => {
   const { id } = useParams();
@@ -22,6 +23,7 @@ const ProductView = () => {
   return (
     <>
       <Header />
+      <Menu/>
       <section className="productView">
         <div className="productView__container">
           {product ? (
@@ -49,8 +51,9 @@ const ProductView = () => {
           ) : (
             <p>Cargando detalles del producto...</p>
           )}
-          <div className="productView__relationated">
-            <h3>Productos relacionados</h3>
+          <div className="productView__btns">
+            <button className="buy">Comprar</button>
+            <button className="cart">Agregar al carrito</button>
           </div>
         </div>
       </section>

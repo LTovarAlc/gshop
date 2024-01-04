@@ -13,6 +13,8 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     background-color: #fff;
     border-radius: 12px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
@@ -48,6 +50,7 @@
 
 .productIMG{
     height: 90%;
+    width: 100%;
 }   
 
 .productView__details{
@@ -57,6 +60,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    padding: 32px 0px;
 }
 
 .productView__price__category-container{
@@ -75,6 +79,11 @@
 .productView__category{
     font-style: italic;
     font-weight: 700;
+    cursor: pointer;
+}
+
+.productView__category:hover{
+    text-decoration: underline;
 }
 
 .productView__name-container{
@@ -105,9 +114,45 @@
     border-radius: 12px;
 }
 
-.productView__description{
+.productView__btns{
     background-color: #fff;
     height: 100%;
-    width: 100%;
+    width: 40%;
     padding: 6px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
+
+.buy, .cart{
+    height: 30%;
+    width: 40%;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(334deg, #6b97f7, #7525e2, #f7137e);
+    background-size: 180% 180%;
+    animation: gradient-animation 6s ease infinite;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: bolder;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.buy:hover, .cart:hover{
+    transition: 0.1s ease;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
