@@ -31,7 +31,7 @@ const CardSlider = () => {
   return (
     <section className="container__cards">
       {productData.map((product, index) => (
-        <Link to={"/ProductView"}>
+        <Link to={`/ProductView/${product.id}`}>
           <div key={index} className="cardslider">
             <img
               src={product.articleIMG}
