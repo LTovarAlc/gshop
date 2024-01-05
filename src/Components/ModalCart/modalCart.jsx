@@ -1,5 +1,6 @@
 import React from "react";
 import "./modalCart.css"
+import ProductInCart from "./ProductInCart/productInCart";
 
 const ModalCart = ({closeModal}) => {
     return <div className="modalBackground">
@@ -7,7 +8,7 @@ const ModalCart = ({closeModal}) => {
         <img src="../../img/close.png" alt="Cerrar" className="closeBtnCart" onClick={closeModal}/>
             <h2>Este es tu carrito de compras</h2>
             <div className="productsInCart__container">
-
+                <ProductInCart/>
             </div>
             <div className="modalCartBtns__container">
                 <button className="cleanCart">Limpiar carrito</button>
