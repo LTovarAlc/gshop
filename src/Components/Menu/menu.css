@@ -108,3 +108,13 @@
 .links:hover .Shopycar {
   filter: invert(0%);
 }
+
+/* Estilos para bloquear el desplazamiento */
+.modal-open {
+  overflow: hidden;
+}
+
+/* Restablecer el desplazamiento si es necesario */
+.modal-open .modalCart {
+  overflow: auto;
+}

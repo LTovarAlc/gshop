@@ -5,10 +5,12 @@ import { useLocation } from "react-router-dom";
 import "animate.css"
 
 import "./menu.css";
+import ModalCart from "../ModalCart/modalCart";
 
 const Menu = () => {
 
   const [scrolled, setScrolled] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +30,18 @@ const Menu = () => {
     return null
   }
 
+  //open cartModal
+
+  const openModal = () => {
+    setModalOpen(true);
+    document.body.classList.add('modal-open');
+  }
+
+  const closeModal = () => {
+    setModalOpen(false);
+    document.body.classList.remove('modal-open')
+  }
+
   return (
     <>
       <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
@@ -38,12 +52,13 @@ const Menu = () => {
                 <Link to={"/Account"} className="links">Vender</Link>
                 <span className="links">Ofertas</span>
                 <span className="links">Categorias</span>
-                <span className="links shopycar__container">
+                <span className="links shopycar__container" onClick={openModal}>
                     <span>Mi carrito</span>
                     <img src="../../img/ShopyCar.png" alt="Shop car" className="Shopycar"/>
                 </span>
             </ul>
         </div>
+        {modalOpen && <ModalCart closeModal={closeModal}/>}
       </nav>
     </>
   );
